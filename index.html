@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>THiNKATiVE | Consultans</title>
+    <title>THiNKATiVE | Portfolio</title>
 
     <link rel="icon" type="img/png" href="images/favicon.png">
 
@@ -12,13 +12,13 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="THiNKATiVE helps thinkers turn amazing ideas into real products. Modern, simple, and built with care.">
-    <meta name="keywords" content="Consultants, projects, product development, prototyping, consumer analysis">
+    <meta name="keywords" content="portfolio, projects, product development, prototyping, consumer analysis">
     <meta name="author" content="THiNKATiVE">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thinkative-ltd.github.io/">
 
     <!-- Open Graph for social sharing -->
-    <meta property="og:title" content="THiNKATiVE - Consultants">
+    <meta property="og:title" content="THiNKATiVE - Portfolio">
     <meta property="og:description" content="We help thinkers turn amazing ideas into products.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thinkative-ltd.github.io/">
@@ -28,10 +28,11 @@
     <nav>
         <div class="logo">
             <a href="#home">
-                <img src="images/sitelogoB.png" alt="THiNKATiVE Logo">
+                <img src="images/sitelogoB.png" alt="THiNKATiVE Logo" style="height: 60px; width: auto;">
             </a>
         </div>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger">☰</button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#workpackages">Work Packages</a></li>
@@ -157,11 +158,12 @@
                         <strong>🐦 X / Twitter</strong><br>
                         <a href="#">@thinkative</a>
                     </div>
+
                     <div class="contact-card">
                         <strong>💼 GitHub</strong><br>
                         <a href="#">github.com/thinkative</a>
                     </div>
-                    -->
+                  -->
                 </div>
 
                 <div class="contact-form">
@@ -188,9 +190,28 @@
         <p>© 2026 THiNKATiVE</p>
         <img src="images/favicon.png" alt="THiNKATiVE favicon" style="width: 50px; margin-bottom: 1rem;">
 
+
     </footer>
 
     <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // Sitemap generator function
         function generateSitemap() {
             const pages = [
                 { loc: "https://thinkative-ltd.github.io/", priority: "1.0" },
@@ -211,6 +232,7 @@
             a.click();
             URL.revokeObjectURL(a.href);
         }
+
         window.generateSitemap = generateSitemap;
         console.log('THiNKATiVE site ready. Type generateSitemap() in console to download sitemap.xml.');
     </script>
