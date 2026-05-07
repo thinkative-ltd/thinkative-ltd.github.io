@@ -18,6 +18,11 @@ body {
     padding: 0 1.5rem;
 }
 
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+}
+
 /* Header & Navigation */
 header {
     background: white;
