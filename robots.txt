@@ -1,0 +1,11 @@
+# Robots.txt for THiNKATiVE website
+# This file tells search engines which pages to crawl
+
+User-agent: *
+Allow: /
+
+# Tell search engines where to find your sitemap
+Sitemap: https://thinkative-ltd.github.io/sitemap.xml
+
+# Optional: Prevent crawling of non-existent or private paths
+# Disallow: /private/
