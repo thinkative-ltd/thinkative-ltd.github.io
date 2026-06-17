@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>THiNKATiVE | Consultants</title>
+
+    <link rel="icon" type="img/png" href="images/favicon.png">
+
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="THiNKATiVE helps thinkers turn amazing ideas into real products. Modern, simple, and built with care.">
+    <meta name="keywords" content="Thinkative Consultants, Thinkative, Consultants, Wearables, Research, projects, product development, prototyping, consumer analysis">
+    <meta name="author" content="THiNKATiVE">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thinkative.co.uk/">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="THiNKATiVE - Consultants">
+    <meta property="og:description" content="We help thinkers turn amazing ideas into products.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thinkative.co.uk/">
+
+    <style>
+        /* ==========================================================================
+           1. CORE RESET & BASE STYLES
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #008787;
+            --primary-dark: #005757;
+            --primary-light: #e6f3f3;
+            --surface: #ffffff;
+            --background: #fafaf9;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --border-color: #e5e7eb;
+            --font-stack: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html {
+            scroll-padding-top: 90px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--background);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ==========================================================================
+           2. HEADER & NAVIGATION (Glassmorphism)
+           ========================================================================== */
+        header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 135, 135, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links .nav-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+        }
+
+        .nav-links .nav-btn:hover {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger .bar {
+            display: block;
+            width: 24px;
+            height: 2px;
+            margin: 5px auto;
+            background-color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        /* ==========================================================================
+           3. HERO SECTION (Redesigned with Logo as Centerpiece)
+           ========================================================================== */
+        .hero-section {
+            background-color: var(--surface);
+            padding: 6rem 0 8rem 0;
+            position: relative;
+            background: radial-gradient(circle at 80% 20%, rgba(0, 135, 135, 0.04) 0%, transparent 60%);
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            max-width: 540px;
+        }
+
+        .hero-actions {
+            margin-top: 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #ffffff;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Visual - Logo as Centerpiece */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo-showcase {
+            position: relative;
+            width: 380px;
+            height: 380px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Pulsing background rings */
+        .logo-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 135, 135, 0.15);
+            animation: pulse-ring 3s ease-out infinite;
+        }
+
+        .ring-1 {
+            width: 100%;
+            height: 100%;
+            animation-delay: 0s;
+        }
+
+        .ring-2 {
+            width: 85%;
+            height: 85%;
+            animation-delay: 0.6s;
+        }
+
+        .ring-3 {
+            width: 70%;
+            height: 70%;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.9);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.2;
+            }
+            100% {
+                transform: scale(0.9);
+                opacity: 0.5;
+            }
+        }
+
+        /* Main Logo SVG */
+        .main-logo-svg {
+            width: 260px;
+            height: 260px;
+            position: relative;
+            z-index: 10;
+            filter: drop-shadow(0 20px 30px rgba(0, 135, 135, 0.15));
+            animation: float-logo 4s ease-in-out infinite;
+        }
+
+        @keyframes float-logo {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* Decorative floating elements around logo */
+        .floating-dot {
+            position: absolute;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: float-dot 3s ease-in-out infinite;
+        }
+
+        .dot-1 {
+            width: 8px;
+            height: 8px;
+            top: 20px;
+            right: 40px;
+            animation-delay: 0s;
+        }
+
+        .dot-2 {
+            width: 12px;
+            height: 12px;
+            bottom: 30px;
+            left: 20px;
+            animation-delay: 0.5s;
+        }
+
+        .dot-3 {
+            width: 6px;
+            height: 6px;
+            top: 60px;
+            left: 50px;
+            animation-delay: 1s;
+        }
+
+        .dot-4 {
+            width: 10px;
+            height: 10px;
+            bottom: 60px;
+            right: 30px;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float-dot {
+            0%, 100% {
+                transform: translateY(0px);
+                opacity: 0.2;
+            }
+            50% {
+                transform: translateY(-15px);
+                opacity: 0.6;
+            }
+        }
+
+        /* Glass accent elements around logo */
+        .glass-accent {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            z-index: 5;
+        }
+
+        .glass-accent-1 {
+            width: 80px;
+            height: 80px;
+            top: -20px;
+            left: -20px;
+            border-radius: 20px;
+            background: rgba(0, 135, 135, 0.06);
+            animation: rotate-slow 20s linear infinite;
+        }
+
+        .glass-accent-2 {
+            width: 60px;
+            height: 60px;
+            bottom: 10px;
+            right: -10px;
+            border-radius: 16px;
+            background: rgba(0, 135, 135, 0.08);
+            animation: rotate-slow 15s linear infinite reverse;
+        }
+
+        @keyframes rotate-slow {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .accent-text-visual {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: 0.1em;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            backdrop-filter: blur(4px);
+            z-index: 15;
+        }
+
+        /* ==========================================================================
+           4. WORK PACKAGES SECTION
+           ========================================================================== */
+        .packages-section {
+            padding: 7rem 0;
+            background-color: var(--background);
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+            max-width: 700px;
+        }
+
+        .section-tagline {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+        }
+
+        .card-count {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            opacity: 0.7;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .project-card > p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .card-output-box {
+            background-color: var(--background);
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin-top: auto;
+        }
+
+        .card-output-box h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .card-output-box p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-tag {
+            background: var(--surface);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            font-size: 0.75rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* ==========================================================================
+           5. CONTACT SECTION (Gradient CTA Style)
+           ========================================================================== */
+        .cta-footer {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: #ffffff;
+            padding: 90px 0;
+            text-align: center;
+        }
+
+        .cta-footer h2 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .cta-footer > .container > p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info-block-footer {
+            margin-bottom: 40px;
+        }
+
+        .info-item-footer {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .info-label-footer {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 8px;
+        }
+
+        .info-link-footer {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .info-link-footer:hover {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: underline;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 32px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .modern-form-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-row-footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group-footer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group-footer input,
+        .form-group-footer textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: #ffffff;
+            transition: var(--transition);
+        }
+
+        .form-group-footer input::placeholder,
+        .form-group-footer textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group-footer input:focus,
+        .form-group-footer textarea:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-white {
+            background-color: #ffffff;
+            color: var(--primary-dark);
+            width: auto;
+            align-self: flex-start;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        .btn-white:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .form-privacy-note-footer {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: left;
+            margin-top: 0.5rem;
+        }
+
+        /* ==========================================================================
+           6. FOOTER STYLES
+           ========================================================================== */
+        .modern-footer {
+            background-color: var(--background);
+            padding: 3.5rem 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-brand img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .footer-brand p,
+        .footer-meta p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .footer-meta a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .footer-meta a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        /* ==========================================================================
+           7. RESPONSIVE DESIGN
+           ========================================================================== */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                text-align: center;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .logo-showcase {
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+            }
+
+            .main-logo-svg {
+                width: 200px;
+                height: 200px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-footer h2 {
+                font-size: 32px;
+            }
+
+            .info-link-footer {
+                font-size: 1.3rem;
+            }
+
+            .form-row-footer {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .form-container {
+                padding: 24px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                gap: 2rem;
+                flex-direction: column;
+                background-color: var(--surface);
+                width: 100%;
+                height: calc(100vh - 80px);
+                text-align: center;
+                padding: 3rem 0;
+                transition: 0.3s;
+                border-top: 1px solid var(--border-color);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .footer-brand {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="images/sitelogoB.png" alt="THiNKATiVE Logo">
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#workpackages">Work Packages</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="#contact" class="nav-btn">Contact</a></li>
+</ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section with Logo as Centerpiece -->
+        <section id="home" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Ideate. Prototype. Produce.</h1>
+                    <p class="hero-subtitle">Bridging innovation and real-world product development</p>
+                    <p>Hi, we are Thinkative. We work with people and teams developing new products across wearable technologies, feminine hygiene and medical innovation, helping bridge the gap between early ideas and real-world products.</p>
+                    <p>Whether you're exploring a concept, building a prototype, or trying to figure out the next step, we're here to help navigate the process.</p>
+                    <div class="hero-actions">
+                        <a href="#workpackages" class="btn">View Work Packages →</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="logo-showcase">
+                        <!-- Pulsing background rings -->
+                        <div class="logo-ring ring-1"></div>
+                        <div class="logo-ring ring-2"></div>
+                        <div class="logo-ring ring-3"></div>
+                        
+                        <!-- Glass accent elements -->
+                        <div class="glass-accent glass-accent-1"></div>
+                        <div class="glass-accent glass-accent-2"></div>
+                        
+                        <!-- Floating dots -->
+                        <div class="floating-dot dot-1"></div>
+                        <div class="floating-dot dot-2"></div>
+                        <div class="floating-dot dot-3"></div>
+                        <div class="floating-dot dot-4"></div>
+                        
+                        <!-- Main Logo SVG -->
+                        <svg class="main-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113 113">
+                            <g fill="#008787">
+                                <path d="M73,50.64v51.72c0,5.87-4.76,10.64-10.64,10.64h-11.72c-5.87,0-10.64-4.77-10.64-10.64v-40c0-2.83,1.12-5.53,3.12-7.53l11.72-11.71c1.99-2,4.7-3.12,7.52-3.12,5.88,0,10.64,4.76,10.64,10.64Z"/>
+                                <path d="M113,10.64v11.72c0,5.87-4.76,10.64-10.64,10.64h-40c-2.82,0-5.53-1.12-7.52-3.12l-11.72-11.71c-2-2-3.12-4.71-3.12-7.53,0-5.88,4.77-10.64,10.64-10.64h51.72c5.88,0,10.64,4.76,10.64,10.64Z"/>
+                                <path d="M44.03,44.02l-5.86,5.86c-2,2-4.7,3.12-7.53,3.12H10.64c-5.87,0-10.64-4.77-10.64-10.64v-11.72c0-5.88,4.77-10.64,10.64-10.64h20c2.83,0,5.53,1.12,7.53,3.12l5.86,5.85c4.15,4.16,4.15,10.9,0,15.05Z"/>
+                            </g>
+                        </svg>
+                        
+                        <div class="accent-text-visual">Wearables • Medical • Hardware</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WorkPackages Section -->
+        <section id="workpackages" class="packages-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Capabilities</span>
+                    <h2>Structured Work Packages</h2>
+                    <p class="section-desc">Clear paths from initial abstract concepts to commercially viable, scalable hardware design.</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Package 1 -->
+                    <div class="project-card">
+                        <div class="card-count">01</div>
+                        <h3>Early Stage Discovery</h3>
+                        <p>You have an idea that feels promising, but you are not fully sure what the right technical path looks like yet.</p>
+                        
+                        <div class="card-output-box">
+                            <h4>Expected Output</h4>
+                            <p>Bring structure and direction early on, so teams can move forward with more confidence.</p>
+                            <div class="tag-group">
+                                <span class="project-tag">Project Feasibility Study</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package 2 -->
+                    <div class="project-card">
+                        <div class="card-count">02</div>
+                        <h3>Innovation Roadmap Sprint</h3>
+                        <p>Understanding the real user problem is just as important as the technology itself. Moving from concept to physical product should be mapped thoughtfully.</p>
+                        
+                        <div class="card-output-box">
+                            <h4>Expected Output</h4>
+                            <p>Explore user needs, technology unlocks, technology feasibility analysis and product fit early in development.</p>
+                            <div class="tag-group">
+                                <span class="project-tag">User Needs</span>
+                                <span class="project-tag">Application Mapping</span>
+                                <span class="project-tag">Technology Routes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package 3 -->
+                    <div class="project-card">
+                        <div class="card-count">03</div>
+                        <h3>System Architecture</h3>
+                        <p>It is crucial to balance competitor landscape, material fit, prototype testing, and product performance while safely securing intellectual property.</p>
+                        
+                        <div class="card-output-box">
+                            <h4>Expected Output</h4>
+                            <p>Navigate product development with material considerations, manufacturing parameters, and commercial readiness.</p>
+                            <div class="tag-group">
+                                <span class="project-tag">Product System Framework</span>
+                                <span class="project-tag">Manufacturing Options</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package 4 -->
+                    <div class="project-card">
+                        <div class="card-count">04</div>
+                        <h3>Storytelling & Commercialisation</h3>
+                        <p>A working prototype is only one part of the journey. It needs to be carefully targeted to the correct markets to engineer real value.</p>
+                        
+                        <div class="card-output-box">
+                            <h4>Expected Output</h4>
+                            <p>Help teams think through transition points from product to market readiness before they turn into expensive friction layers.</p>
+                            <div class="tag-group">
+                                <span class="project-tag">Pitch Ready Technical Innovation Brief</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section - Gradient CTA Style -->
+        <section id="contact" class="cta-footer">
+            <div class="container">
+                <h2>Let's build something real together.</h2>
+                <p>Have an innovation puzzle you are trying to solve? Drop us a line. We reply to all prospective inquiries as soon as we can.</p>
+                
+                <div class="contact-info-block-footer">
+                    <div class="info-item-footer">
+                        <span class="info-label-footer">Direct Email</span>
+                        <a href="mailto:info@thinkative.co.uk" class="info-link-footer">info@thinkative.co.uk</a>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <form action="https://formspree.io/f/mjgdpawa" method="POST" class="modern-form-footer">
+                        <div class="form-row-footer">
+                            <div class="form-group-footer">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group-footer">
+                                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                            </div>
+                        </div>
+                        <div class="form-group-footer">
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us briefly about your project concept..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-white">Send Message →</button>
+                        <p class="form-privacy-note-footer">Your data stays strictly private. No marketing spam.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="modern-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <img src="images/favicon.png" alt="THiNKATiVE Icon">
+                <p>&copy; 2026 THiNKATiVE LTD. All rights reserved.</p>
+            </div>
+            <div class="footer-meta">
+                <p>Registered Domain: <a href="https://www.thinkative.co.uk">www.thinkative.co.uk</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                
+                if (targetId === '#' || targetId === '') return;
+                
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        console.log('THiNKATiVE website loaded successfully');
+    </script>
+</body>
+</html>
